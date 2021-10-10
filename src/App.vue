@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Graphs</router-link>
-      <router-link to="/about">About</router-link>
+    <div id="nav" class="bg-info">
+      <router-link to="/graphs">Graphs</router-link>
+      <router-link to="/new">New Graph</router-link>
     </div>
     <router-view></router-view>
   </div>
@@ -20,7 +20,7 @@
 
 #nav {
   padding: 30px;
-  background-color: #42b983;
+  // background-color: #42b983;
   margin-bottom: 20px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   a {

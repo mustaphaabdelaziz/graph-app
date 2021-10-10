@@ -6,33 +6,31 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    graphs:data,
-    toggled:false
+    graphs: data,
+    currentGraphID: 5,
   },
   mutations: {
     addGraph(state, payload) {
-      state.graphs.push(payload);
+      console.log('CurrentID:', state.currentGraphID)
+      state.graphs.push(payload.graph);
+      state.currentGraphID++;
     },
     deleteGraph(state, payload) {
-      console.log("Old list:", state.graphs.length);
-      console.log("payload:", payload.id);
-
       state.graphs = state.graphs.filter(graph => graph.info.id != payload.id);
-      console.log("new list:", state.graphs.length);
     },
     addNodeToGraph(state, payload) {
-      state.graphs = state.graphs.filter(graph => {
-        if (graph.id === payload.graphId) {
-          graph.nodes.push({ id: payload.nodeId });
+      for (const graph of state.graphs) {
+        if (graph.info.id === payload.data.graphId) {
+          graph.nodes.push({ id: payload.data.nodeId });
         }
-      })
+      }
     },
     deleteNodeFromGraph(state, payload) {
-      state.graphs = state.graphs.filter(graph => {
-        if (graph.id === payload.graphId) {
-          graph.nodes = graph.nodes.filter(node => node.id != payload.nodeId)
+      for (const graph of state.graphs) {
+        if (graph.info.id === payload.data.graphId) {
+          graph.nodes = graph.nodes.filter(node => node.id != payload.data.nodeId)
         }
-      })
+      }
     },
   },
   actions: {
@@ -54,6 +52,9 @@ export default new Vuex.Store({
     graphList(state) {
       return state.graphs;
     },
+    getCurrentID(state) {
+      return state.currentGraphID;
+    }
   },
 
 });

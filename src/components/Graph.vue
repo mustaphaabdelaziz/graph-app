@@ -15,20 +15,12 @@
 <script>
 // @ is an alias to /src
 import Node from "./Node.vue";
-// import data from "../data.json";
+
 export default {
   name: "Graph",
   components: {
     Node,
   },
   props: ["nodes"],
-  // data() {
-  //   return { graph: data.graph };
-  // },
-  methods: {
-    generate() {
-      return Math.floor(Math.random() * 1000);
-    },
-  },
 };
 </script>
