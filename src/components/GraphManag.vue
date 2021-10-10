@@ -16,7 +16,6 @@
             ><b-button variant="danger" @click="deleteNode(node.id)"
               ><b-icon icon="trash-fill" aria-hidden="true"></b-icon></b-button
           ></b-td>
-          <!-- <input type="checkbox" name="node" /> -->
         </b-tr>
         <b-tr
           ><b-td colspan="1"

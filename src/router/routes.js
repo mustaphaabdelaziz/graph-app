@@ -53,9 +53,6 @@ const router = new VueRouter({
   routes,
   linkActiveClass: 'active',
   scrollBehavior(to, from, savedPosition) {
-    // console.log("to:", to);
-    // console.log("from:", from);
-    // console.log("savedPosition:", savedPosition);
     if (savedPosition) {
       return savedPosition; // returning to the position where we start of
     }
