@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="border border-light rounded bg-light shadow-sm">
     <h1 class="font-weight-bold">{{ graph.info.name }}</h1>
     <b-table-simple hover small caption-top responsive>
       <b-thead head-variant="dark">

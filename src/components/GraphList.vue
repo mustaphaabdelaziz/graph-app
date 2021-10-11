@@ -1,8 +1,9 @@
 <template>
   <b-container>
     <b-row align-h="center">
-      <b-col cols="8">
-        <div class="border">
+      <!-- <b-col  sm="10" cols="10"> -->
+      <b-col cols="12" md="10">
+        <div>
           <router-view></router-view>
         </div>
         <div

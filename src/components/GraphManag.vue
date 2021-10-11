@@ -1,7 +1,6 @@
 <template>
   <div>
     <h2>{{ graph.info.name }}</h2>
-    <!-- <form> -->
     <b-table-simple hover small caption-top responsive>
       <b-thead head-variant="dark">
         <b-tr>
@@ -27,7 +26,6 @@
         >
       </b-tbody>
     </b-table-simple>
-    <!-- </form> -->
   </div>
 </template>
 <script>
@@ -38,7 +36,7 @@ export default {
     nbrNodes() {
       return this.graph.nodes.length;
     },
-    maxNodes() {
+    maxNodeId() {
       let values = [];
       for (const node of this.graph.nodes) {
         values.push(node.id);
@@ -58,7 +56,7 @@ export default {
         type: "addNodeToGraph",
         data: {
           graphId: this.graph.info.id,
-          nodeId: this.maxNodes + 1,
+          nodeId: this.maxNodeId + 1,
         },
       });
     },

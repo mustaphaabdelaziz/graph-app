@@ -9,7 +9,7 @@
 </template>
 
 <style lang="scss">
-@import "~@/assets/scss/vendors/bootstrap-vue/index";
+// @import "~@/assets/scss/vendors/bootstrap-vue/index";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -20,7 +20,6 @@
 
 #nav {
   padding: 30px;
-  // background-color: #42b983;
   margin-bottom: 20px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   a {

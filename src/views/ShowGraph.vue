@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="border border-light rounded bg-light shadow-sm">
     <h1>{{$route.params.graph.info.name}}</h1>
      <graph :nodes="$route.params.graph.nodes"></graph>
   </div>

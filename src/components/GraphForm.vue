@@ -1,5 +1,5 @@
 <template>
-  <div class="col-8 m-auto">
+  <div class="col-6 m-auto border border-light rounded bg-light shadow-sm">
     <h2>Create a Graph</h2>
     <b-form @submit.prevent="onSubmit">
       <b-form-group id="name-input">
@@ -18,7 +18,7 @@
           required
         ></b-form-input>
       </b-form-group>
-      <div class="m-3">
+      <div class="m-4">
         <b-button class="w-100" type="submit" variant="info">Add Node</b-button>
       </div>
     </b-form>
@@ -39,7 +39,6 @@ export default {
   },
   methods: {
     onSubmit() {
-      // event.preventDefault();
       this.$store.dispatch({
         type: "addGraph",
         graph: {
